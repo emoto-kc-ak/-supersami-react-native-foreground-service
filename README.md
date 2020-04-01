@@ -128,7 +128,7 @@ and in last our main Function - ForegroundEmitter
 
 and then in your Js file in your root which is index file you need to add this like 
 ```
-import  ForegroundService  from  'react-native-foreground-service';
+import ForegroundService from '@supersami/react-native-foreground-service';
     let foregroundTask = async (data) => {
     console.log("I am here",data)
     await myTask();

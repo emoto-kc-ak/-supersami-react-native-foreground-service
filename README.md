@@ -81,7 +81,7 @@ go to your main Activity and declare a variable
 	public  void  onNewIntent(Intent  intent) {
 		super.onNewIntent(intent);
 		isOnNewIntent = true;
-		ForegroundEmitter();
+    ForegroundEmitter(intent);
 	}
 
 ```
@@ -92,7 +92,7 @@ go to your main Activity and declare a variable
 	protected  void  onStart() {
 		super.onStart();
 		if(isOnNewIntent == true){}else {
-			ForegroundEmitter();
+      ForegroundEmitter(getIntent());
 		}
 	}
 ```
@@ -101,12 +101,12 @@ and in last our main Function - ForegroundEmitter
 
 ```
   
+ public void ForegroundEmitter(Intent intent){
+    // this method is to send back data from java to javascript so one can easily 
+    // know which button from notification or from the notification btn is clicked
 
-public  void  ForegroundEmitter(){
-// this method is to send back data from java to javascript so one can easily
-// know which button from notification or the notification button is clicked
-	String  main = getIntent().getStringExtra("mainOnPress");
-	String  btn = getIntent().getStringExtra("buttonOnPress");
+    String main = intent.getStringExtra("mainOnPress");
+    String btn = intent.getStringExtra("buttonOnPress");
 	WritableMap  map = Arguments.createMap();
 	if (main != null) {
 		// Log.d("SuperLog A", main);

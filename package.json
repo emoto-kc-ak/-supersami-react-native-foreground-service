@@ -1,5 +1,5 @@
 {
-  "name": "react-native-foreground-service",
+  "name": "@supersami/react-native-foreground-service",
   "version": "0.1.0",
   "description": "A React Native android module to support launching a foreground service and JS code execution",
   "main": "index.js",
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/cristianoccazinsp/react-native-foreground-service.git"
+    "url": "git+https://github.com/dksami/-supersami-react-native-foreground-service.git"
   },
   "keywords": [
     "react",
@@ -19,7 +19,7 @@
     "background"
   ],
   "author": {
-    "name": "Cristiano Coelho (supersami)"
+    "name": "Raja Osama (supersami)"
   },
   "license": "MIT",
 

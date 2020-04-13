@@ -188,6 +188,22 @@ start();
 await  ForegroundService.stopService()
 
 
+// Receiving Clicks in the App so you can do what ever like redirecting to any 
+// route with any specific data.
+
+ useEffect(() => {
+    let subscip = DeviceEventEmitter.addListener(
+      'notificationClickHandle',
+      function (e: Event) {
+        console.log('json', e);
+      },
+    );
+    return function cleanup() {
+      subscip.remove();
+    };
+  }, []);
+
+
 ```
 
 there are multiple functions in the package which are as follow

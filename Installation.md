@@ -1,13 +1,13 @@
 # Installation
 
 
-To get Started, firstly install the package with either npm or yarn on your project
+To get started, firstly install the package with either npm or yarn on your project
 ```
 yarn add @raja0sama/react-native-foreground-service@1.0.1
 ````
 
 ## Setting Up
-Unfortunatly we only support manual linking at the moment, also looking for a person to help us set up automatic linking for this library. You need to follow these 3 steps carefully and make sure you dont miss any.
+Unfortunately, we only support manual linking at the moment, also looking for a person to help us set up automatic linking for this library. You need to follow these 3 steps carefully and make sure you don't miss any.
  
  - Adding Permissions.
  - Registering Service in the Manifest.
@@ -18,7 +18,7 @@ Unfortunatly we only support manual linking at the moment, also looking for a pe
  # Introduction
 
 ### 1#
-To Start using foreground service you need to to add Permissions for foreground service as well as for wake lock by adding these 2 lines in your android manifest.
+To Start using foreground service you need to add Permissions for foreground service as well as for wake lock by adding these 2 lines in your android manifest.
 
 ```
 <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/> 
@@ -26,7 +26,7 @@ To Start using foreground service you need to to add Permissions for foreground 
 ```
 
 ### 2#
-Next Step is to Register Service in your manifest inside application.
+The Next Step is to Register Service in your manifest inside the application.
 
 ```
 <meta-data android:name="com.supersami.foregroundservice.notification_channel_name" android:value="supersami Service"/> 
@@ -54,7 +54,7 @@ and then add this, otherwise, just add the orange color and integer array
 ```
 
 ###  3#
-Next Step will be to go to your main Activity and add support to receive interactions of notification in your js code. To do that Declear a global variable like this.
+The Next Step will be to go to your main Activity and add support to receive interactions of notification in your js code. To do that Declare a global variable like this.
 ```
 	public  boolean  isOnNewIntent = false;
 ```
@@ -87,7 +87,7 @@ then you will need to override two methods of MainActivity. OnNewIntent as Well 
 	}
 ```
 By overriding these methods you are instructing java to emit the interactions of the notification on both dead and background state.
-Finally we will declear our main Function - ForegroundEmitter
+Finally, we will declare our main Function - ForegroundEmitter
 ```
   
 

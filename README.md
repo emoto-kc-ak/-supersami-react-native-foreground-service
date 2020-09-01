@@ -81,7 +81,7 @@ go to your main Activity and declare a variable
 	public  void  onNewIntent(Intent  intent) {
 		super.onNewIntent(intent);
 		isOnNewIntent = true;
-    ForegroundEmitter(intent);
+		ForegroundEmitter();
 	}
 
 ```
@@ -92,7 +92,7 @@ go to your main Activity and declare a variable
 	protected  void  onStart() {
 		super.onStart();
 		if(isOnNewIntent == true){}else {
-      ForegroundEmitter(getIntent());
+			ForegroundEmitter();
 		}
 	}
 ```
@@ -101,12 +101,12 @@ and in last our main Function - ForegroundEmitter
 
 ```
   
- public void ForegroundEmitter(Intent intent){
-    // this method is to send back data from java to javascript so one can easily 
-    // know which button from notification or from the notification btn is clicked
 
-    String main = intent.getStringExtra("mainOnPress");
-    String btn = intent.getStringExtra("buttonOnPress");
+public  void  ForegroundEmitter(){
+// this method is to send back data from java to javascript so one can easily
+// know which button from notification or the notification button is clicked
+	String  main = getIntent().getStringExtra("mainOnPress");
+	String  btn = getIntent().getStringExtra("buttonOnPress");
 	WritableMap  map = Arguments.createMap();
 	if (main != null) {
 		// Log.d("SuperLog A", main);
@@ -128,7 +128,7 @@ and in last our main Function - ForegroundEmitter
 
 and then in your Js file in your root which is index file you need to add this like 
 ```
-import ForegroundService from '@supersami/react-native-foreground-service';
+import  ForegroundService  from  'react-native-foreground-service';
     let foregroundTask = async (data) => {
     console.log("I am here",data)
     await myTask();
@@ -186,22 +186,6 @@ start();
 
 // stop with 
 await  ForegroundService.stopService()
-
-
-// Receiving Clicks in the App so you can do what ever like redirecting to any 
-// route with any specific data.
-
- useEffect(() => {
-    let subscip = DeviceEventEmitter.addListener(
-      'notificationClickHandle',
-      function (e: Event) {
-        console.log('json', e);
-      },
-    );
-    return function cleanup() {
-      subscip.remove();
-    };
-  }, []);
 
 
 ```

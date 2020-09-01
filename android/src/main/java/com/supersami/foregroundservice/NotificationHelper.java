@@ -51,6 +51,8 @@ class NotificationHelper {
             return null;
         }
 
+        Log.d("SuperLog",""+bundle.getString("mainOnPress"));
+
         Intent notificationIntent = new Intent(context, mainActivityClass);
         notificationIntent.putExtra("mainOnPress",bundle.getString("mainOnPress"));
         int uniqueInt1 = (int) (System.currentTimeMillis() & 0xfffffff);

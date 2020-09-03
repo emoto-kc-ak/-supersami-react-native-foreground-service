@@ -7,7 +7,8 @@ A **foreground service** performs some operation that is noticeable to the user.
   
   In short, a Foreground service is a service that runs even when you don't have your app running on recent apps. A foreground service is a notification that lets you run a background task.
 
-Before anything you need to set up foreground service and do the manual linking, here is the link to the [Installation Docs]([https://github.com/Raja0sama/-supersami-react-native-foreground-service/blob/master/Installation.md#installation](https://github.com/Raja0sama/-supersami-react-native-foreground-service/blob/master/Installation.md#installation))
+Before anything you need to set up foreground service and do the manual linking, here is the link to the 
+[Installation Docs]([https://github.com/Raja0sama/-supersami-react-native-foreground-service/blob/master/Installation.md#installation](https://github.com/Raja0sama/-supersami-react-native-foreground-service/blob/master/Installation.md#installation))
 
 
 [Working Example](https://github.com/Raja0sama/ForegroundSerivceExample.git)
